@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "rxjs": "^6.2.1",
     "typescript": "^2.9.2"
   },
   "devDependencies": {},
