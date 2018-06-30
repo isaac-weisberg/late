@@ -1,7 +1,7 @@
 import { Language } from "./Language";
-import { Quote } from "./Quote";
+import { Translations } from "./Tranlations";
 
 export class Session {
-    quotes: { [id: string]: Quote } = {}
+    quotes: { [id: string]: Translations } = {}
     languages: Language[] = []
 }
