@@ -2,7 +2,7 @@ import * as React from 'react'
 import { Session } from '../Models/Session';
 
 export interface SessionViewProps {
-    session: Session|undefined
+    session?: Session
 }
 
 export class SessionView extends React.Component<SessionViewProps, { session: Session }> {
