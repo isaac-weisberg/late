@@ -1,17 +1,25 @@
 import * as React from 'react'
 import { Session } from '../Models/Session';
 
-export class SessionView extends React.Component<{}, { session: Session }> {
-    constructor(props) {
+export interface SessionViewProps {
+    session: Session|undefined
+}
+
+export class SessionView extends React.Component<SessionViewProps, { session: Session }> {
+    constructor(props: SessionViewProps) {
         super(props)
         this.state = {
-            session: new Session()
+            session: props.session || new Session()
         }
     }
 
     render() {
         return <div>
-            
+            {
+                this.state.session.languages.length == 0
+                ? "No languages"
+                : this.state.session.languages.map(language => <div key={language}>{language}</div>)
+            }
         </div>
     }
 }
